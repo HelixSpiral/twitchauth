@@ -14,7 +14,7 @@
 		<div id="scope">Scope: </div>
 	</body>
 	<script>
-	var url = window.location;
+	var url = window.location.href;
 
 	var match = url.match(/access_token=(\S+)&scope=(\S+)/);
 	document.getElementById('link').innerHTML = 'Please note your token is not saved by this site, if you lose it you\'ll have to generate another one.';
