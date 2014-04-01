@@ -1,0 +1,24 @@
+<!--
+	Obviously this looks like garbage, I'm not good with webdev.
+	If you'd like to improve this, feel free to fork it at: https://github.com/Shawn-Smith/twitchtokengen
+-->
+
+<html>
+	<header>
+		<title>Twitch.tv oauth token generator (for IRC)</title>
+	</header>
+
+	<body>
+		<div id="link">If a token isn't being displayed below, click here: <a href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=token&client_id=m91evgfnwt31wo8qpti8fepjzibe8ms&redirect_uri=https://shawn-smith.github.io/twitchtokengen/&scope=chat_login">Get oauth token</a></div>
+		<div id="oauth_token">Token: </div>
+		<div id="scope">Scope: </div>
+	</body>
+	<script>
+	var url = window.location;
+
+	var match = url.match(/access_token=(\S+)&scope=(\S+)/);
+	document.getElementById('link').innerHTML = 'Please note your token is not saved by this site, if you lose it you\'ll have to generate another one.';
+	document.getElementById('oauth_token').innerHTML = 'Token: ' + match[1];
+	document.getElementById('scope').innerHTML = 'Scope: ' + match[2];
+	</script>
+<html>

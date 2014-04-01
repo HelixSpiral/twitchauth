@@ -1,0 +1,7 @@
+This is a simple page to generate an oauth token for the Twitch.tv IRC.
+
+To connect to the IRC pass the oauth token as a password to the server.
+Example in WeeChat:
+
+/server add twitch irc.twitch.tv/6667 -password=oauth:23456yufgd45trgf4354t -nicks=MyNick
+/connect twitch
