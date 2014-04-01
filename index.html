@@ -9,7 +9,8 @@
 	</header>
 
 	<body>
-		<div id="link">If a token isn't being displayed below, click here: <a href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=token&client_id=m91evgfnwt31wo8qpti8fepjzibe8ms&redirect_uri=https://shawn-smith.github.io/twitchtokengen/&scope=chat_login">Get oauth token</a></div>
+		<div>If a token isn't being displayed below, click here: <a href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=token&client_id=m91evgfnwt31wo8qpti8fepjzibe8ms&redirect_uri=https://shawn-smith.github.io/twitchtokengen/&scope=chat_login">Get oauth token</a></div>
+		<div>Please note: Your token is not saved by this site, if you lose it you\'ll have to generate another one.</div>
 		<div id="oauth_token">Token: </div>
 		<div id="scope">Scope: </div>
 	</body>
@@ -17,7 +18,6 @@
 	var url = window.location.href;
 
 	var match = url.match(/access_token=(\S+)&scope=(\S+)/);
-	document.getElementById('link').innerHTML = 'Please note your token is not saved by this site, if you lose it you\'ll have to generate another one.';
 	document.getElementById('oauth_token').innerHTML = 'Token: ' + match[1];
 	document.getElementById('scope').innerHTML = 'Scope: ' + match[2];
 	</script>
