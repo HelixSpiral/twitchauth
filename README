@@ -5,3 +5,6 @@ Example in WeeChat:
 
 /server add twitch irc.twitch.tv/6667 -password=oauth:23456yufgd45trgf4354t -nicks=MyNick
 /connect twitch
+
+
+This page can be viewed at: https://shawn-smith.github.io/twitchtokengen/
